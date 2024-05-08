@@ -2,21 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+    background-color: #202020;
+}
+
 .hero-container {
+    background-image: url('/assets/slide.jpg');
     background-size: cover;
     background-position: center top;
-    height: 80vh;
+    height: 50vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
     color: white; 
+    
 }
 
 .hero-content {
-    max-width: 800px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); 
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.5);  /*semitransparente*/
+    margin-top: 20px;
+    overflow-y: auto; /*texto visible, scroll independiente tamaño pantalla*/
+
 }
 
 .btn-primary {
@@ -27,6 +36,8 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 10px;
+    
 }
 
 .btn-primary:hover {
@@ -107,3 +118,41 @@ footer p {
 .btn-primary:hover {
     background-color: #DEE8FF; 
 }
+
+.services-section {
+    background-color: #202020; 
+    padding: 40px 20px; 
+}
+
+.section-title {
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 30px; 
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; /* Espacio entre cuadrículas/ítems */
+}
+
+.service-item {
+    background: #FFFFFF;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    border-radius: 8px; 
+    transition: transform 0.3s ease; /* animación hover ítems */
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* animación hover ítems */
+}
+
+h3 {
+    color: #CD642B; 
+    font-weight: bold;
+    
+
+
+}
+
