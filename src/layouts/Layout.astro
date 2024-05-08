@@ -1,11 +1,15 @@
 ---
 
+
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+
+import Footer from '../components/Footer.astro';
 ---
+
 
 <!doctype html>
 <html lang="es">
@@ -31,10 +35,8 @@ const { title } = Astro.props;
 		<main>
 			<slot /> 
 		</main>
-		<footer>
-			<p>Derechos reservados © {new Date().getFullYear()}</p>
-		</footer>
 		
+		<Footer />
 	</body>
 </html>
 
