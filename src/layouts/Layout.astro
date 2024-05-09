@@ -23,14 +23,16 @@ import Footer from '../components/Footer.astro';
 	</head>
 	<body>
 		<header>
-			
-			<nav>
-				<ul>
-					<li><a href="/">Inicio</a></li>
-					<li><a href="/servicios">Servicios</a></li>
-					<li><a href="/contacto">Contacto</a></li>
-				</ul>
-			</nav>
+			<div class="header-container">
+				<img src="/assets/logoAnnounce.png" alt="Announceme" class="header-logo">
+				<nav>
+					<ul>
+						<li><a href="/">Inicio</a></li>
+						<li><a href="/servicios">Servicios</a></li>
+						<li><a href="/contacto">Contacto</a></li>
+					</ul>
+				</nav>
+			</div>
 		</header>
 		<main>
 			<slot /> 
