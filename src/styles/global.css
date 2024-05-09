@@ -16,6 +16,7 @@ body, html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #202020;
 }
 
 main {
@@ -161,26 +162,7 @@ h3 {
 
 }
 
-footer {
-    background-color: #000;  
-    color: #fff;  
-    display: flex;
-    justify-content: space-between;  /*separa el logo y el textoa  ambos lados*/
-    align-items: center;  
-    padding: 20px;  
-    width: 100%;  
-}
 
-.footer-logo {
-    height: 50px;  
-}
-
-.footer-container {
-    width: 100%;  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .header-container {
     display: flex;
