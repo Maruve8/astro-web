@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+
+import Layout from '../layouts/Layout.astro';
+
+import Grid from '../components/Grid.astro';
+import Preview from '../components/Preview.astro';
+
+const servicios = (await getCollection('servicios')).sort(
+	(a: { data: { publishDate: number; }; }, b: { data: { publishDate: number; }; }) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+<Layout title="Servicios de Announceme">
+	<main class="wrapper stack gap-8">
+        <Grid variant="offset">
+            {
+                servicios.map((servicios) => (
+                    <li>
+                        <Preview servicios={servicios} />
+                    </li>
+                ))
+            }
+        </Grid>
+    </main>
+</Layout>
