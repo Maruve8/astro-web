@@ -1,8 +1,33 @@
 ---
-import '../styles/global.css';
+const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-black text-white flex justify-between items-center p-5">
-    <img src="/assets/logoAnnounce.png" alt="Logo de Announceme" class="h-12">
-    <p>Derechos reservados © {new Date().getFullYear()}</p>
+
+<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <img src="/assets/logoAnnounce.png" alt="Logo de Announceme" class="footer-logo">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {currentYear}. Todos los derechos reservados.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li>
+            <a href="/" class="hover:underline me-4 md:me-6">Inicio</a>
+        </li>
+        <li>
+            <a href="/politica-de-cookies/" class="hover:underline me-4 md:me-6">Política de Cookies</a>
+        </li>
+        <li>
+            <a href="/politica-de-privacidad/" class="hover:underline me-4 md:me-6">Política de privacidad</a>
+        </li>
+        <li>
+            <a href="mailto:contacto@announceme.com" class="hover:underline">Contacto</a>
+        </li>
+    </ul>
+    </div>
 </footer>
+
+<style>
+    .footer-logo {
+    height: 50px;  
+}
+</style>
+
