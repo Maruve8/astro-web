@@ -1,25 +1,124 @@
 ---
-import { getCollection } from 'astro:content';
-
+import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
-
-import Grid from '../components/Grid.astro';
-import Preview from '../components/Preview.astro';
-
-const servicios = (await getCollection('servicios')).sort(
-	(a: { data: { publishDate: number; }; }, b: { data: { publishDate: number; }; }) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
-);
 ---
-<Layout title="Servicios de Announceme">
-	<main class="wrapper stack gap-8">
-        <Grid variant="offset">
-            {
-                servicios.map((servicios) => (
-                    <li>
-                        <Preview servicios={servicios} />
-                    </li>
-                ))
-            }
-        </Grid>
-    </main>
+
+<Layout title="Servicios">
+    <section class="services-section">
+        
+        <div class="services-container">
+            <div class="service-card">
+                <img src="/assets/desarrolloweb.jpg" alt="Desarrollo Web" class="service-image">
+                <div class="service-info">
+                    <h2 class="service-title">Desarrollo Web</h2>
+                    <p>Creación y mantenimiento de tu presencia online con tecnologías punteras.</p>
+                    <p>Entra en el mundo digital con soluciones personalizadas que potencian tu negocio.
+                    </p>
+                </div>
+            </div>
+            <div class="service-card offset">
+                <img src="/assets/marketing.png" alt="Marketing Digital" class="service-image">
+                <div class="service-info">
+                    <h2 class="service-title">Marketing Digital</h2>
+                    <p>Nos ocupamos de tu presencia en Redes Sociales, Copy, SEO y campañas Google Ads.
+                    </p>
+                    <p>Maximiza tus resultados con estrategias de marketing digital efectivas y personalizadas.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="/assets/networking.jpg" alt="Networking" class="service-image">
+                <div class="service-info">
+                    <h2 class="service-title">Networking</h2>
+                    <p>Fomentamos la colaboración entre empresas para expandir tu red de contactos y oportunidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </Layout>
+
+
+<style>
+
+
+body {
+    font-family: 'Arial', sans-serif; 
+    background-color: #202020; 
+    
+    margin: 0;
+    padding: 0;
+}
+
+
+
+    .services-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /*espacio vertical entre trajetas */
+    
+}
+
+.service-card {
+    width: 60%; 
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    margin: 40px 0; 
+    transform: translateX(0); 
+    transition: transform 0.3s ease; 
+    position: relative; /* z-index */
+    z-index: 1; /* las superpone sobre el fondo */
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.03); /* tarjeta se viene arriba */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* hover con sombra */
+    z-index: 3;
+    
+}
+
+.service-card.offset {
+    margin-left: 130px; /*tarjeta marketing a un lado */
+}
+
+.service-image {
+    margin-top: 8px;
+    width: 40%;
+    height: 200px;
+    object-fit: cover; /*proporción imagen */
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /*imagen como bloque */
+    
+}
+
+.service-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.service-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-info p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+
+
+
+</style>
