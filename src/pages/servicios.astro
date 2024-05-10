@@ -7,7 +7,9 @@ import Layout from '../layouts/Layout.astro';
     <section class="services-section">
         
         <div class="services-container">
+
             <div class="service-card">
+                <a href="/servicios/desarrollo-web" class="service-link">
                 <img src="/assets/desarrolloweb.jpg" alt="Desarrollo Web" class="service-image">
                 <div class="service-info">
                     <h2 class="service-title">Desarrollo Web</h2>
@@ -17,6 +19,7 @@ import Layout from '../layouts/Layout.astro';
                 </div>
             </div>
             <div class="service-card offset">
+                <a href="/servicios/marketing-digital" class="service-link">
                 <img src="/assets/marketing.png" alt="Marketing Digital" class="service-image">
                 <div class="service-info">
                     <h2 class="service-title">Marketing Digital</h2>
@@ -26,12 +29,14 @@ import Layout from '../layouts/Layout.astro';
                 </div>
             </div>
             <div class="service-card">
+                <a href="/servicios/networking" class="service-link">
                 <img src="/assets/networking.jpg" alt="Networking" class="service-image">
                 <div class="service-info">
                     <h2 class="service-title">Networking</h2>
                     <p>Fomentamos la colaboración entre empresas para expandir tu red de contactos y oportunidades.</p>
                 </div>
             </div>
+
         </div>
     </section>
 </Layout>
@@ -89,7 +94,7 @@ body {
 
 .service-image {
     margin-top: 8px;
-    width: 40%;
+    width: 50%;
     height: 200px;
     object-fit: cover; /*proporción imagen */
     border-top-left-radius: 2px;
@@ -117,7 +122,15 @@ body {
 }
 
 
+.service-link {
+    display: block;
+    color: inherit; /* color de texto del padre */
+    text-decoration: none; 
+}
 
+.service-link:hover {
+    text-decoration: none; 
+}
 
 
 
