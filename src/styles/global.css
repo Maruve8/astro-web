@@ -4,7 +4,6 @@
 
 
 body {
-    background-color: #202020;
     flex-direction: column;
     min-height: 100vh;
 }
@@ -16,7 +15,6 @@ body, html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #202020;
 }
 
 main {
@@ -40,7 +38,6 @@ main {
 .hero-content {
     text-align: center;
     padding: 50px;
-    background-color: rgba(0, 0, 0, 0.5);  /*semitransparente*/
     margin-top: 20px;
     overflow-y: auto; /*texto visible, scroll independiente tamaño pantalla*/
 
@@ -63,7 +60,6 @@ main {
 }
 
 nav {
-    background-color: #000; 
     padding: 0;
 }
 
@@ -96,7 +92,6 @@ nav ul li a:hover {
     color: #fff; 
     text-align: center; 
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); 
     
 }
 
@@ -126,7 +121,6 @@ nav ul li a:hover {
 }
 
 .services-section {
-    background-color: #202020; 
     padding: 40px 20px; 
 }
 
@@ -143,7 +137,6 @@ nav ul li a:hover {
 }
 
 .service-item {
-    background: #FFFFFF;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
     border-radius: 8px; 
@@ -154,7 +147,7 @@ nav ul li a:hover {
     transform: translateY(-5px); /* animación hover ítems */
 }
 
-h3 {
+h1, h3 {
     color: #F79422; 
     font-weight: bold;
     
@@ -169,7 +162,6 @@ h3 {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #000;
 }
 
 .header-logo {
